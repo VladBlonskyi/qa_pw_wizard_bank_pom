@@ -16,15 +16,6 @@ test.beforeEach(async ({ page }) => {
   await addCustomerPage.lastName(lastName);
   await addCustomerPage.postCode(postCode);
   await addCustomerPage.addButton();
-
-  /* 
-  Pre-conditons:
-  1. Open Add Customer page
-  2. Fill the First Name.  
-  3. Fill the Last Name.
-  4. Fill the Postal Code.
-  5. Click [Add Customer].
-  */
 });
 
 test("Assert manager can search customer by Last Name", async ({ page }) => {
@@ -41,12 +32,4 @@ test("Assert manager can search customer by Last Name", async ({ page }) => {
   const rowText = await lastRow.textContent();
 
   expect(rowText).toContain(lastName);
-
-  /* 
-Test:
-1. Open Customers page
-2. Fill the firstName to the search field
-3. Assert customer row is present in the table. 
-4. Assert no other rows is present in the table.
-*/
 });

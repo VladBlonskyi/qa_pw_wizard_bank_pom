@@ -58,8 +58,3 @@ export class AddCustomerPage {
     await this.searchByFirstname.fill(firstname);
   }
 }
-
-/*
-getByRole('button', { name: 'Customers' })
-getByPlaceholder('Search Customer')
-*/
