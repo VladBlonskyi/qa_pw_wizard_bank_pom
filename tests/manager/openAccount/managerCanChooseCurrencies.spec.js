@@ -1,8 +1,8 @@
 import { test } from "@playwright/test";
-import { AddCustomerPage } from "../../../src/pages/manager/OpenAccountPage";
+import { OpenAccountPage } from "../../../src/pages/manager/OpenAccountPage";
 
 test("Assert manager can choose currencies for account", async ({ page }) => {
-  const addCustomerPage = new AddCustomerPage(page);
+  const addCustomerPage = new OpenAccountPage(page);
 
   await addCustomerPage.open();
 

@@ -1,6 +1,6 @@
 const { expect } = require("@playwright/test");
 
-export class AddCustomerPage {
+export class OpenAccountPage {
   constructor(page) {
     this.page = page;
     this.currencyDropdown = page.locator("select#currency");
@@ -18,3 +18,5 @@ export class AddCustomerPage {
     await expect(this.currencyDropdown).toHaveValue(value);
   }
 }
+
+Op;
